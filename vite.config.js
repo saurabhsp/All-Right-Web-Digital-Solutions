@@ -3,5 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/All-Right-Web-Digital-Solutions/',
+  base: process.env.GITHUB_ACTIONS
+    ? '/All-Right-Web-Digital-Solutions/'
+    : '/',
 })
